@@ -241,7 +241,7 @@ def create_lung_function_gauge(fev1, fvc):
 # Main function
 def main():
     # Sidebar
-    st.sidebar.image("https://www.example.com/logo.png", use_column_width=True)
+    st.sidebar.image("asthma.png", use_column_width=True)
     st.sidebar.markdown("<div class='sub-header'>Asthma Risk Predictor</div>", unsafe_allow_html=True)
     st.sidebar.markdown("---")
     
