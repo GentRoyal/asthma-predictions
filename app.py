@@ -148,6 +148,11 @@ def main():
                 'NighttimeSymptoms': [bool_to_int(nighttime_symptoms)],
                 'ExerciseInduced': [bool_to_int(exercise_induced)]
             })
+
+            input_data["Gender"] = input_data["Gender"].astype("category")
+            input_data["Ethnicity"] = input_data["Ethnicity"].astype("category")
+            input_data["EducationLevel"] = input_data["EducationLevel"].astype("category")
+
             
             # Get the scaler
             scaler = load_scaler()
