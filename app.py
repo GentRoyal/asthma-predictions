@@ -314,12 +314,13 @@ def main():
                                      index=st.session_state.user_input.get('gender', 0))
                 
                 with col2:
-                    ethnicity_options = {0: "Type 0", 1: "Type 1", 2: "Type 2", 3: "Type 3"}
+                    ethnicity_options = {0: "White/Caucasian", 1: "Black/African American", 2: "Hispanic/Latino", 3: "Asian/Other"}
+                    
                     ethnicity = st.selectbox("Ethnicity", options=list(ethnicity_options.keys()), 
                                            format_func=lambda x: ethnicity_options[x],
                                            index=st.session_state.user_input.get('ethnicity', 0))
                     
-                    education_options = {0: "Level 0", 1: "Level 1", 2: "Level 2", 3: "Level 3"}
+                    education_options = {0: "Less than High School", 1: "High School Graduate", 2: "Some College/Associate's Degree", 3: "Bachelor's Degree or Higher"}
                     education = st.selectbox("Education Level", options=list(education_options.keys()),
                                            format_func=lambda x: education_options[x],
                                            index=st.session_state.user_input.get('education', 0))
@@ -878,20 +879,6 @@ def main():
         - It uses self-reported symptoms which may vary in interpretation
         - It cannot account for all possible environmental and genetic factors
         - It provides a risk assessment, not a definitive diagnosis
-        """)
-        
-        # Development team info
-        st.markdown("""
-        ### Development Team
-        
-        This application was developed by a multidisciplinary team including:
-        
-        - Data scientists and machine learning engineers
-        - Pulmonologists and allergists
-        - Public health researchers
-        - Software developers
-        
-        For more information or to provide feedback, please contact us at example@example.com.
         """)
     
     # Help & FAQ page
