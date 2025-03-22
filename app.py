@@ -361,16 +361,16 @@ def main():
                 
                 with col1:
                     pollution_exposure = st.slider("Pollution Exposure", 0.0, 10.0, 
-                                                  value=st.session_state.user_input.get('pollution_exposure', 5.0), 0.1,
+                                                  value=st.session_state.user_input.get('pollution_exposure', 5.0), step = 0.1,
                                                   help="Exposure to air pollution from 0 (minimal) to 10 (severe)")
                     
                     pollen_exposure = st.slider("Pollen Exposure", 0.0, 10.0, 
-                                               value=st.session_state.user_input.get('pollen_exposure', 5.0), 0.1,
+                                               value=st.session_state.user_input.get('pollen_exposure', 5.0), step = 0.1,
                                                help="Exposure to pollen from 0 (minimal) to 10 (severe)")
                 
                 with col2:
                     dust_exposure = st.slider("Dust Exposure", 0.0, 10.0, 
-                                             value=st.session_state.user_input.get('dust_exposure', 5.0), 0.1,
+                                             value=st.session_state.user_input.get('dust_exposure', 5.0), step = 0.1,
                                              help="Exposure to dust from 0 (minimal) to 10 (severe)")
                     
                     pet_allergy = st.radio("Pet Allergy", [0, 1], 
