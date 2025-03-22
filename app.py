@@ -33,7 +33,7 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
     .info-box {
-        background-color: #E3F2FD;
+        background-color: #0D47A1;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
