@@ -260,12 +260,12 @@ def main():
     # Button to generate random values
     if st.sidebar.button("Generate Random Values"):
         st.session_state.user_input = generate_random_values()
-        st.experimental_rerun()
+        st.rerun()
     
     # Reset button
     if st.sidebar.button("Reset All Values"):
         st.session_state.user_input = {}
-        st.experimental_rerun()
+        st.rerun()
     
     # Disclaimer
     st.sidebar.markdown("---")
@@ -786,7 +786,7 @@ def main():
             # Option to clear history
             if st.button("Clear History"):
                 st.session_state.prediction_history = []
-                st.experimental_rerun()
+                st.rerun()
             
             # Trends over time if multiple predictions exist
             if len(st.session_state.prediction_history) > 1:
