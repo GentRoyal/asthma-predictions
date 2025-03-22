@@ -345,11 +345,13 @@ def main():
                               help="Physical activity level from 0 (sedentary) to 10 (very active)")
                 with col2:
                     diet_quality = st.slider("Diet Quality", 0.0, 10.0, 
-                                           value=st.session_state.user_input.get('diet_quality', 5.0), 0.1,
+                                             step = 0.1,
+                                           value=st.session_state.user_input.get('diet_quality', 5.0),
                                            help="Diet quality from 0 (poor) to 10 (excellent)")
                     
                     sleep_quality = st.slider("Sleep Quality", 4.0, 10.0, 
-                                            value=st.session_state.user_input.get('sleep_quality', 7.0), 0.1,
+                                              step = 0.1,
+                                            value=st.session_state.user_input.get('sleep_quality', 7.0),
                                             help="Sleep quality from 4 (poor) to 10 (excellent)")
             
             # Environmental tab
