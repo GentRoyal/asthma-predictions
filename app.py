@@ -340,9 +340,9 @@ def main():
                                       index=st.session_state.user_input.get('smoking', 0))
                     
                     physical_activity = st.slider("Physical Activity", 0.0, 10.0, 
-                                                 value=st.session_state.user_input.get('physical_activity', 3.0), 0.1,
-                                                 help="Physical activity level from 0 (sedentary) to 10 (very active)")
-                
+                              step=0.1,
+                              value=st.session_state.user_input.get('physical_activity', 3.0),
+                              help="Physical activity level from 0 (sedentary) to 10 (very active)")
                 with col2:
                     diet_quality = st.slider("Diet Quality", 0.0, 10.0, 
                                            value=st.session_state.user_input.get('diet_quality', 5.0), 0.1,
