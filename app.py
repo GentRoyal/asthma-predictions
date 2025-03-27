@@ -258,7 +258,7 @@ def main():
         st.session_state.user_input = {}
     
     # Button to generate random values
-    if st.sidebar.button("Generate Random Values"):
+    if st.sidebar.button("Generate Simulated Data"):
         st.session_state.user_input = generate_random_values()
         st.rerun()
     
