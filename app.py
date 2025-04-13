@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas as pd
+import pandas as p
 import numpy as np
 import pickle
 from sklearn.preprocessing import StandardScaler
