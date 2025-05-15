@@ -369,7 +369,8 @@ def main():
                                                value=st.session_state.user_input.get('pollen_exposure', 5.0), step = 0.1,
                                                help="Exposure to pollen from 0 (minimal) to 10 (severe)")
 
-                    pollution_type = st.selectbox("Select Pollution Type", ["Air", "Water", "Soil", "Noise"])
+                    pollution_type = st.selectbox("Most Common Pollution Type", ["Air Pollution", "Pollen", "Dust", "Mold", "Smoke", "Industrial Emissions", "Vehicle Exhaust"])
+
 
                 
                 with col2:
@@ -402,6 +403,8 @@ def main():
                                      format_func=lambda x: "No" if x == 0 else "Yes",
                                      horizontal=True,
                                      index=st.session_state.user_input.get('eczema', 0))
+
+                    infection_history = st.selectbox("Select Past Infection", ["Respiratory Infection", "Sinus Infection", "Bronchitis", "Pneumonia", "Tuberculosis", "COVID-19", "Flu"])
                 
                 with col2:
                     hay_fever = st.radio("Hay Fever", [0, 1], 
