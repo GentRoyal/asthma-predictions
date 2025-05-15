@@ -405,6 +405,12 @@ def main():
                                      index=st.session_state.user_input.get('eczema', 0))
 
                     infection_history = st.selectbox("Select Past Infection", ["Respiratory Infection", "Sinus Infection", "Bronchitis", "Pneumonia", "Tuberculosis", "COVID-19", "Flu"])
+
+                    fever_type = st.selectbox("Select Type of Fever", ["None", "Viral Fever", "Bacterial Fever", "Typhoid", "Malaria", "Dengue", "Persistent Low-Grade Fever"])
+
+
+                    birth_complication = st.selectbox("Select Birth Complication", ["None", "Premature Birth", "Low Birth Weight", "Neonatal Infection", "Birth Asphyxia", "Cesarean Delivery"])
+
                 
                 with col2:
                     hay_fever = st.radio("Hay Fever", [0, 1], 
