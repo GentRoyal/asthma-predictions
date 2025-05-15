@@ -350,10 +350,10 @@ def main():
                                            value=st.session_state.user_input.get('diet_quality', 5.0),
                                            help="Diet quality from 0 (poor) to 10 (excellent)")
                     
-                    sleep_quality = st.slider("Sleep Quality", 4.0, 10.0, 
+                    sleep_quality = st.slider("Sleep Quality", 0.0, 10.0, 
                                               step = 0.1,
-                                            value=st.session_state.user_input.get('sleep_quality', 7.0),
-                                            help="Sleep quality from 4 (poor) to 10 (excellent)")
+                                            value=st.session_state.user_input.get('sleep_quality', 5.0),
+                                            help="Sleep quality from 0 (poor) to 10 (excellent)")
             
             # Environmental tab
             with section_tabs[2]:
@@ -368,6 +368,9 @@ def main():
                     pollen_exposure = st.slider("Pollen Exposure", 0.0, 10.0, 
                                                value=st.session_state.user_input.get('pollen_exposure', 5.0), step = 0.1,
                                                help="Exposure to pollen from 0 (minimal) to 10 (severe)")
+
+                    pollution_type = st.selectbox("Select Pollution Type", ["Air", "Water", "Soil", "Noise"])
+
                 
                 with col2:
                     dust_exposure = st.slider("Dust Exposure", 0.0, 10.0, 
