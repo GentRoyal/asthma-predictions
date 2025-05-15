@@ -404,7 +404,7 @@ def main():
                                      horizontal=True,
                                      index=st.session_state.user_input.get('eczema', 0))
 
-                    infection_history = st.selectbox("Select Past Infection", ["Respiratory Infection", "Sinus Infection", "Bronchitis", "Pneumonia", "Tuberculosis", "COVID-19", "Flu"])
+                    infection_history = st.selectbox("Select Past Infection", ["None", "Respiratory Infection", "Sinus Infection", "Bronchitis", "Pneumonia", "Tuberculosis", "COVID-19", "Flu"])
 
                     fever_type = st.selectbox("Select Type of Fever", ["None", "Viral Fever", "Bacterial Fever", "Typhoid", "Malaria", "Dengue", "Persistent Low-Grade Fever"])
 
@@ -452,6 +452,8 @@ def main():
                                               format_func=lambda x: "No" if x == 0 else "Yes",
                                               horizontal=True,
                                               index=st.session_state.user_input.get('shortness_breath', 0))
+                    current_symptom = st.selectbox("Select Most Dominant Symptom", ["Cough", "Wheezing", "Shortness of Breath", "Chest Tightness", "Fatigue", "No Symptoms"])
+
                 
                 with col2:
                     chest_tightness = st.radio("Chest Tightness", [0, 1], 
